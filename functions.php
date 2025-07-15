@@ -208,3 +208,53 @@ add_filter( 'get_custom_logo', function( $html ) {
 add_action('acf/init', function () {
     remove_filter('acf_the_content', 'wpautop' );
 } );
+
+require get_template_directory() . '/includes/license.php';
+
+/**
+ * Check if the theme is licensed.
+ *
+ * @return bool
+ */
+function iptvsmart_is_licensed() {
+	$license_key = get_option( 'iptvsmart_license_key' );
+	$license_status = get_option( 'iptvsmart_license_status' );
+
+	if ( $license_key && 'valid' === $license_status ) {
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Display a notice if the theme is not licensed.
+ */
+function iptvsmart_license_notice() {
+	if ( ! iptvsmart_is_licensed() ) {
+		?>
+		<div class="notice notice-error">
+			<p>
+				<?php
+				printf(
+					/* translators: %s: The license page URL. */
+					__( 'Please <a href="%s">enter your license key</a> to activate the theme and receive automatic updates.', 'iptvsmart' ),
+					esc_url( admin_url( 'admin.php?page=iptvsmart-license' ) )
+				);
+				?>
+			</p>
+		</div>
+		<?php
+	}
+}
+add_action( 'admin_notices', 'iptvsmart_license_notice' );
+
+/**
+ * Disable theme features if the theme is not licensed.
+ */
+function iptvsmart_disable_features() {
+	if ( ! iptvsmart_is_licensed() ) {
+		// Disable theme features here.
+	}
+}
+add_action( 'after_setup_theme', 'iptvsmart_disable_features' );
