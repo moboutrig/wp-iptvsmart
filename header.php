@@ -51,11 +51,13 @@
                     <div class="logo">
                         <a href="<?php echo home_url(); ?>">
 							<?php
-								echo wp_get_attachment_image( 
-								get_field('header_logo', 'options'), 
-								array('278', '92'),
-								"",
-								array( "class" => "img-fluid", 'style' => "width: 60%;" ) ); 
+								if ( function_exists( 'get_field' ) ) {
+									echo wp_get_attachment_image(
+									get_field('header_logo', 'options'),
+									array('278', '92'),
+									"",
+									array( "class" => "img-fluid", 'style' => "width: 60%;" ) );
+								}
 							?>
 						</a>
                     </div>
@@ -69,11 +71,13 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="<?php echo home_url(); ?>">
 						<?php
+						if ( function_exists( 'get_field' ) ) {
 							echo wp_get_attachment_image( 
 							get_field('header_logo', 'options'), 
 							array('278', '92'),
 							"",
 							array( "class" => "img-fluid", 'style' => "width: 80%;" ) ); 
+						}
 						?>
 					</a>
                     <div class="collapse navbar-collapse mean-menu">
