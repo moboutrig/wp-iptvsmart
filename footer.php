@@ -114,7 +114,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="single-footer-widget">
                         <a href="<?php echo home_url(); ?>" class="logo">
-                            <img src="https://via.placeholder.com/180x120" alt="logo" class="img-fluid">
+                            <img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/logo.jpg" alt="logo" class="img-fluid">
                         </a>
 
                         <p>We are a digital agency that helps brands to achieve their business outcomes. We see technology as a tool to create amazing things.</p>

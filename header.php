@@ -35,22 +35,20 @@
 							<span></span>
 						</a>
 						<nav class="mean-nav">
-							<?php
-								wp_nav_menu(
-									array(
-										'theme_location' => 'menu-1',
-										'menu_id'        => 'primary-menu',
-										'container' 	 => false,
-										'menu_class'     => 'navbar-nav',
-										'add_li_class'   => 'nav-item'
-									)
-								);
-							?>
+							<ul class="navbar-nav">
+								<li class="nav-item"><a href="<?php echo home_url(); ?>" class="nav-link active">Home</a></li>
+								<li class="nav-item"><a href="<?php echo home_url('/about-us'); ?>" class="nav-link">About Us</a></li>
+								<li class="nav-item"><a href="<?php echo home_url('/services'); ?>" class="nav-link">Services</a></li>
+								<li class="nav-item"><a href="<?php echo home_url('/pricing'); ?>" class="nav-link">Pricing</a></li>
+								<li class="nav-item"><a href="<?php echo home_url('/faq'); ?>" class="nav-link">FAQ</a></li>
+								<li class="nav-item"><a href="<?php echo home_url('/testimonials'); ?>" class="nav-link">Testimonials</a></li>
+								<li class="nav-item"><a href="<?php echo home_url('/contact-us'); ?>" class="nav-link">Contact Us</a></li>
+							</ul>
 						</nav>
 					</div>
                     <div class="logo">
                         <a href="<?php echo home_url(); ?>">
-							<img src="https://via.placeholder.com/278x92" alt="logo" class="img-fluid" style="width: 60%;">
+							<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/logo.jpg" alt="logo" class="img-fluid" style="width: 60%;">
 						</a>
                     </div>
                 </div>
@@ -62,20 +60,18 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="<?php echo home_url(); ?>">
-						<img src="https://via.placeholder.com/278x92" alt="logo" class="img-fluid" style="width: 80%;">
+						<img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/logo.jpg" alt="logo" class="img-fluid" style="width: 80%;">
 					</a>
                     <div class="collapse navbar-collapse mean-menu">
-						<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'menu-1',
-									'menu_id'        => 'primary-menu',
-									'container' 	 => false,
-									'menu_class'     => 'navbar-nav',
-									'add_li_class'   => 'nav-item'
-								)
-							);
-						?>
+						<ul class="navbar-nav">
+							<li class="nav-item"><a href="<?php echo home_url(); ?>" class="nav-link active">Home</a></li>
+							<li class="nav-item"><a href="<?php echo home_url('/about-us'); ?>" class="nav-link">About Us</a></li>
+							<li class="nav-item"><a href="<?php echo home_url('/services'); ?>" class="nav-link">Services</a></li>
+							<li class="nav-item"><a href="<?php echo home_url('/pricing'); ?>" class="nav-link">Pricing</a></li>
+							<li class="nav-item"><a href="<?php echo home_url('/faq'); ?>" class="nav-link">FAQ</a></li>
+							<li class="nav-item"><a href="<?php echo home_url('/testimonials'); ?>" class="nav-link">Testimonials</a></li>
+							<li class="nav-item"><a href="<?php echo home_url('/contact-us'); ?>" class="nav-link">Contact Us</a></li>
+						</ul>
                     </div>
                 </nav>
             </div>

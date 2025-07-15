@@ -29,7 +29,7 @@ get_header();
               </div>
               <div class="col-lg-6 col-md-12">
                   <div class="gradient-banner-image" data-aos="fade-up">
-                      <img src="https://via.placeholder.com/650x590" alt="placeholder" class="img-fluid" style="border-radius: 35px;">
+                      <img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/hero.jpg" alt="placeholder" class="img-fluid" style="border-radius: 35px;">
                   </div>
               </div>
           </div>
@@ -38,7 +38,7 @@ get_header();
   <!-- End Gradient Banner Area -->
   */ 
   
-    <video autoplay muted loop id="myVideo" poster="https://via.placeholder.com/650x590">
+    <video autoplay muted loop id="myVideo" poster="<?php echo bloginfo('template_directory'); ?>/assets/img/new/video-poster.jpg">
         <source src="https://www.youtube.com/watch?v=ScMzIvxBSi4" type="video/mp4">
     </video>
 
@@ -143,7 +143,7 @@ get_header();
 
                         <div role="listitem" class="supported-devices--list-item apps col-xs-6 col-md-3 col-lg-3">
                             <a>
-                                <img src="https://via.placeholder.com/72x72" alt="placeholder" class="img-fluid">
+                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/application.jpg" alt="placeholder" class="img-fluid">
                                 <p class="supported-devices--device-title">Android</p>
                                 <p class="supported-devices--device-subtitle">Android Box, Android TV, Android Phone</p>
                             </a>
@@ -192,7 +192,7 @@ get_header();
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-5 col-md-12">
-                    <img src="https://via.placeholder.com/650x590" alt="placeholder" class="img-fluid" style="border-radius: 35px;">
+                    <img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/hero.jpg" alt="placeholder" class="img-fluid" style="border-radius: 35px;">
                 </div>
             </div>
             <!-- <div class="video-box">   
@@ -213,7 +213,7 @@ get_header();
             <div class="screenshots-slides owl-carousel owl-theme">
 
                         <div class="single-screenshot-item">
-                            <img src="https://via.placeholder.com/240x245" alt="placeholder" class="img-fluid">
+                            <img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/movie-slider.jpg" alt="placeholder" class="img-fluid">
                         </div>
 
             </div>
@@ -2603,7 +2603,7 @@ get_header();
 
                         <div class="single-feedback-box">
                             <div style="margin: 15px 0px;">
-                                <img src="https://via.placeholder.com/240x245" alt="placeholder" class="img-fluid" style="max-width: 100%;height: 350px;object-fit:cover;">
+                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/testimonial.jpg" alt="placeholder" class="img-fluid" style="max-width: 100%;height: 350px;object-fit:cover;">
                             </div>
                             <div class="client-info">
                                 <div class="d-flex align-items-center">
@@ -2646,7 +2646,7 @@ get_header();
 
                         <div role="listitem" class="supported-devices--list-item apps col-xs-6 col-md-3 col-lg-2">
                             <a>
-                                <img src="https://via.placeholder.com/240x245" alt="placeholder" class="img-fluid">
+                                <img src="<?php echo bloginfo('template_directory'); ?>/assets/img/new/application.jpg" alt="placeholder" class="img-fluid">
                                 <p class="supported-devices--device-title">Android</p>
                                 <p class="supported-devices--device-subtitle">Android Box, Android TV, Android Phone</p>
                             </a>
