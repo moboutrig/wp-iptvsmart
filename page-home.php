@@ -17,31 +17,19 @@ get_header();
           <div class="row align-items-center">
               <div class="col-lg-6 col-md-12">
                   <div class="gradient-banner-content">
-                      <h1><?php echo esc_html( get_field('hb_title') ); ?></h1>
-                      <p><?php echo esc_html( get_field('hb_description') ); ?></p>
+                      <h1>The Best IPTV Subscription</h1>
+                      <p>We offer the best IPTV subscription service in the world. We have more than 10,000 channels and 30,000 VODs.</p>
 
-                      <?php 
-                        $button = get_field('hb_button');
 
-                        if( is_array( $button ) ) :
-                      ?>
-                          <a href="<?php echo esc_url( $button['url'] ); ?>" class="default-btn" target="<?php echo esc_attr( $button['target'] ); ?>">
-                            <?php echo esc_html( $button['title'] ); ?>
+                          <a href="#" class="default-btn" target="_self">
+                            Get Started
                           </a>
-                      <?php
-                        endif;
-                      ?>
+
                   </div>
               </div>
               <div class="col-lg-6 col-md-12">
                   <div class="gradient-banner-image" data-aos="fade-up">
-                      <?php
-                          echo wp_get_attachment_image( 
-                          get_field('hb_image'), 
-                          array('650', '590'),
-                          "",
-                          array( "class" => "img-fluid", "style" => "border-radius: 35px;" ) ); 
-                      ?>
+                      <img src="https://via.placeholder.com/650x590" alt="placeholder" class="img-fluid" style="border-radius: 35px;">
                   </div>
               </div>
           </div>
@@ -50,16 +38,8 @@ get_header();
   <!-- End Gradient Banner Area -->
   */ 
   
-        $hb_video_poster = wp_get_attachment_image_src( 
-        get_field('hb_video_poster'), 
-        array('650', '590'),
-        "",
-        array( "class" => "img-fluid" ) ); 
-
-    ?>
-
-    <video autoplay muted loop id="myVideo" poster="<?php echo esc_attr( $hb_video_poster[0] ); ?>">
-        <source src="<?php echo esc_url( get_field('hb_video') ); ?>" type="video/mp4">
+    <video autoplay muted loop id="myVideo" poster="https://via.placeholder.com/650x590">
+        <source src="https://www.youtube.com/watch?v=ScMzIvxBSi4" type="video/mp4">
     </video>
 
 
@@ -70,19 +50,13 @@ get_header();
                 <div class="col-lg-5 col-md-12">
                     <div class="position-relative">
                         <span style="left: -90px;top: 10px;">4K Live</span>
-                        <h1><?php echo esc_html( get_field('hb_title') ); ?></h1>
-                        <p><?php echo esc_html( get_field('hb_description') ); ?></p>
-                        <?php 
-                            $button = get_field('hb_button');
+                        <h1>The Best IPTV Subscription</h1>
+                        <p>We offer the best IPTV subscription service in the world. We have more than 10,000 channels and 30,000 VODs.</p>
 
-                            if( is_array( $button ) ) :
-                        ?>
-                            <a href="<?php echo esc_url( $button['url'] ); ?>" class="default-btn" target="<?php echo esc_attr( $button['target'] ); ?>">
-                                <?php echo esc_html( $button['title'] ); ?>
+                            <a href="#" class="default-btn" target="_self">
+                                Get Started
                             </a>
-                        <?php
-                            endif;
-                        ?>
+
                     </div>
                 </div>
             </div>
@@ -126,67 +100,55 @@ get_header();
           <div class="row align-items-center">
               <div class="col-lg-6 col-md-12">
                   <div class="features-content">
-                      <h2><?php echo esc_html( get_field('service_title') ); ?></h2>
+                      <h2>Our Services</h2>
                       <ul class="features-list">
-                      <?php
-                        if( have_rows('service_details') ) : $i = 1;
-                          while( have_rows('service_details') ) : the_row();
-                      ?>   
+
                             <li>
-                                <div class="icon <?php echo 'bg' . $i; ?>">
-                                    <i class="ri-<?php echo esc_attr( get_sub_field('icon') ); ?>"></i>
+                                <div class="icon bg1">
+                                    <i class="ri-4k-line"></i>
                                 </div>
-                                <h3><?php echo esc_html( get_sub_field('title') ); ?></h3>
-                                <p><?php echo esc_html( get_sub_field('description') ); ?></p>
+                                <h3>4K</h3>
+                                <p>We offer 4K channels and VODs.</p>
                             </li>
-                      <?php
-                          $i++;
-                          if( $i > 3 ) {
-                            $i = 1;
-                          }
-                          endwhile;
-                        endif;
-                      ?>
+
+                            <li>
+                                <div class="icon bg2">
+                                    <i class="ri-film-line"></i>
+                                </div>
+                                <h3>Movies</h3>
+                                <p>We have more than 30,000 VODs.</p>
+                            </li>
+
+                            <li>
+                                <div class="icon bg3">
+                                    <i class="ri-time-line"></i>
+                                </div>
+                                <h3>24/7 Support</h3>
+                                <p>We offer 24/7 support.</p>
+                            </li>
+
                       </ul>
 
-                      <?php 
-                        $button = get_field('service_button');
 
-                        if( is_array( $button ) ) :
-                      ?>
                           <div class="btn-box">
-                              <a href="<?php echo esc_url( $button['url'] ); ?>" class="default-btn" target="<?php echo esc_attr( $button['target'] ); ?>">
-                                <?php echo esc_html( $button['title'] ); ?>
+                              <a href="#" class="default-btn" target="_self">
+                                Get Started
                               </a>
                           </div>
-                      <?php
-                        endif;
-                      ?>
+
                   </div>
               </div>
               <div class="col-lg-6 col-md-12">
                   <div class="row align-items-center appsSect" style="text-align: center;margin: 30px 0px;">
-                  <?php
-                    if( have_rows('list_items') ) :
-                      while( have_rows('list_items') ) : the_row();
-                  ?>
+
                         <div role="listitem" class="supported-devices--list-item apps col-xs-6 col-md-3 col-lg-3">
                             <a>
-                                <?php
-                                  echo wp_get_attachment_image( 
-                                  get_sub_field('image'), 
-                                  array('72', '72'),
-                                  "",
-                                  array( "class" => "img-fluid") ); 
-                                ?>
-                                <p class="supported-devices--device-title"><?php echo esc_html( get_sub_field('title') ); ?></p>
-                                <p class="supported-devices--device-subtitle"><?php echo esc_html( get_sub_field('tagline') ); ?></p>
+                                <img src="https://via.placeholder.com/72x72" alt="placeholder" class="img-fluid">
+                                <p class="supported-devices--device-title">Android</p>
+                                <p class="supported-devices--device-subtitle">Android Box, Android TV, Android Phone</p>
                             </a>
                         </div>
-                  <?php
-                      endwhile;
-                    endif;
-                  ?> 
+
                   </div>
               </div>
           </div>
@@ -200,42 +162,26 @@ get_header();
   <div class="features-area pt-100 pb-75" style="padding-top: 0px;">
       <div class="container">
           <div class="row justify-content-center">
-          <?php
-            if( have_rows('service_cards') ) : $i = 1;
-              while( have_rows('service_cards') ) : the_row();
-          ?> 
+
                 <div class="col-xl-3 col-lg-4 col-sm-6 col-md-6">
                     <div class="single-features-box" style="min-height: 100%;">
-                        <div class="icon <?php echo 'bg' . $i; ?>">
-                            <i class="ri-<?php echo esc_html( get_sub_field('icon') ); ?>"></i>
+                        <div class="icon bg1">
+                            <i class="ri-4k-line"></i>
                         </div>
-                        <h3><?php echo esc_html( get_sub_field('title') ); ?></h3>
-                        <p><?php echo esc_html( get_sub_field('description') ); ?></p>
+                        <h3>4K</h3>
+                        <p>We offer 4K channels and VODs.</p>
                     </div>
                 </div>
-          <?php
-              $i++;
-              if( $i > 3 ) {
-                $i = 1;
-              }
-              endwhile;
-            endif;
-          ?> 
+
           </div>
 
-          <?php 
-            $button = get_field('service_button');
 
-            if( is_array( $button ) ) :
-          ?>
               <div class="btn-box" style="text-align: center; margin-top: 40px;">
-                  <a href="<?php echo esc_url( $button['url'] ); ?>" class="default-btn" target="<?php echo esc_attr( $button['target'] ); ?>">
-                    <?php echo esc_html( $button['title'] ); ?>
+                  <a href="#" class="default-btn" target="_self">
+                    Get Started
                   </a>
               </div>
-          <?php
-            endif;
-          ?>
+
       </div>
   </div>
   <!-- End Features Area -->
@@ -246,13 +192,7 @@ get_header();
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-5 col-md-12">
-                    <?php
-                        echo wp_get_attachment_image( 
-                        get_field('hb_image'), 
-                        array('650', '590'),
-                        "",
-                        array( "class" => "img-fluid", "style" => "border-radius: 35px;" ) ); 
-                    ?>
+                    <img src="https://via.placeholder.com/650x590" alt="placeholder" class="img-fluid" style="border-radius: 35px;">
                 </div>
             </div>
             <!-- <div class="video-box">   
@@ -268,26 +208,14 @@ get_header();
     <div class="screenshots-area ptb-100" style="background: linear-gradient(279.99deg, #9F5FF1 -1.19%, #FF54B0 50.96%, #FF9F5A 99.95%);">
         <div class="container">
             <div class="section-title" style="max-width: 100%;">
-                <h2 style="color: white;"><?php echo esc_html( get_field('ms_title') ); ?></h2>
+                <h2 style="color: white;">Our Movies</h2>
             </div>
             <div class="screenshots-slides owl-carousel owl-theme">
-            <?php
-                if( have_rows('movies_slider') ) :
-                    while( have_rows('movies_slider') ) : the_row();
-            ?>
+
                         <div class="single-screenshot-item">
-                            <?php
-                                echo wp_get_attachment_image( 
-                                get_sub_field('image'), 
-                                array('240', '245'),
-                                "",
-                                array( "class" => "img-fluid") ); 
-                            ?>
+                            <img src="https://via.placeholder.com/240x245" alt="placeholder" class="img-fluid">
                         </div>
-            <?php
-                    endwhile;
-                endif;
-            ?> 
+
             </div>
         </div>
     </div>
@@ -2665,37 +2593,28 @@ get_header();
      <div class="feedback-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <h2><?php echo esc_html( get_field('testi_title') ); ?></h2>
-                <span class="sub-title"><?php echo esc_html( get_field('testi_sub_title') ); ?></span>
+                <h2>What Our Clients Say</h2>
+                <span class="sub-title">We have more than 10,000 satisfied clients.</span>
 
                 <span class="sub-title"><img src="<?php echo bloginfo('template_directory'); ?>/assets/img/stars-4.5.svg"  style="width: 50%;"></span>
 
             </div>
             <div class="feedback-slides owl-carousel owl-theme">
-            <?php
-                if( have_rows('testimonials') ) :
-                    while( have_rows('testimonials') ) : the_row();
-            ?>
+
                         <div class="single-feedback-box">
                             <div style="margin: 15px 0px;">
-                                <?php
-                                    echo wp_get_attachment_image( 
-                                    get_sub_field('image'), 
-                                    array('240', '245'),
-                                    "",
-                                    array( "class" => "img-fluid", "style" => "max-width: 100%;height: 350px;object-fit:cover;") ); 
-                                ?>
+                                <img src="https://via.placeholder.com/240x245" alt="placeholder" class="img-fluid" style="max-width: 100%;height: 350px;object-fit:cover;">
                             </div>
                             <div class="client-info">
                                 <div class="d-flex align-items-center">
                                     <div class="title" style="margin-left: 0px;">
-                                        <h3><?php echo esc_html( get_sub_field('name') ); ?></h3>
-                                        <span><?php echo esc_html( get_sub_field('country') ); ?></span>
+                                        <h3>John Doe</h3>
+                                        <span>USA</span>
                                     </div>
                                 </div>
 
                             </div>
-                            <p style="min-height: 202px;"><?php echo esc_html( get_sub_field('description') ); ?></p>
+                            <p style="min-height: 202px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                             <div class="rating d-flex align-items-center justify-content-between">
                                 <h5>Excellent</h5>
                                 <div>
@@ -2707,10 +2626,7 @@ get_header();
                                 </div>
                             </div>
                         </div>
-            <?php
-                    endwhile;
-                endif;
-            ?> 
+
             </div>
         </div>
     </div>
@@ -2722,32 +2638,20 @@ get_header();
     <div class="pricing-area bg-gradient-color ptb-100" id="applications">
         <div class="container">
             <div class="page-title-content">
-                <h2><?php echo esc_html( get_field('app_title') ); ?></h2>
-                <span class="sub-title" style="color: white;"><?php echo esc_html( get_field('app_sub_title') ); ?></span>
+                <h2>Our Applications</h2>
+                <span class="sub-title" style="color: white;">We have applications for all devices.</span>
             </div>
 
             <div class="row align-items-center appsSect" style="text-align: center;margin: 30px 0px;">
-            <?php
-                if( have_rows('applications') ) :
-                    while( have_rows('applications') ) : the_row();
-            ?>
+
                         <div role="listitem" class="supported-devices--list-item apps col-xs-6 col-md-3 col-lg-2">
                             <a>
-                                <?php
-                                    echo wp_get_attachment_image( 
-                                    get_sub_field('image'), 
-                                    array('240', '245'),
-                                    "",
-                                    array( "class" => "img-fluid") ); 
-                                ?>
-                                <p class="supported-devices--device-title"><?php echo esc_html( get_sub_field('title') ); ?></p>
-                                <p class="supported-devices--device-subtitle"><?php echo esc_html( get_sub_field('tagline') ); ?></p>
+                                <img src="https://via.placeholder.com/240x245" alt="placeholder" class="img-fluid">
+                                <p class="supported-devices--device-title">Android</p>
+                                <p class="supported-devices--device-subtitle">Android Box, Android TV, Android Phone</p>
                             </a>
                         </div>
-            <?php
-                    endwhile;
-                endif;
-            ?> 
+
             </div>
         </div>
     </div>

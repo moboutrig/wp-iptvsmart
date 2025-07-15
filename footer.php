@@ -72,14 +72,14 @@
     <div class="contact-info-area pb-100" id="contact">
         <div class="container">
             <div class="contact-info-inner">
-                <h2 style="max-width: 100%;"><?php echo esc_html( get_field('footer_contact_headline', 'options') ); ?></h2>
+                <h2 style="max-width: 100%;">Let's Talk</h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="single-contact-info-box">
                             <div class="icon bg1">
                                 <i class="ri-whatsapp-line"></i>
                             </div>
-                            <h3><a href="https://api.whatsapp.com/send?phone=<?php echo get_field('phone_number', 'options'); ?>&amp;text=Bonjour%20IPTV%20Smarters!"><?php echo get_field('phone_number', 'options'); ?></a></h3>
+                            <h3><a href="https://api.whatsapp.com/send?phone=1-541-754-3010&amp;text=Bonjour%20IPTV%20Smarters!">1-541-754-3010</a></h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
@@ -88,7 +88,7 @@
                                 <i class="ri-mail-line"></i>
                             </div>
                      
-                            <h3><a href="mailto: <?php echo get_field('email', 'options'); ?>"><span class="__cf_email__" ><?php echo get_field('email', 'options'); ?></span></a></h3>
+                            <h3><a href="mailto: hello@pakap.com"><span class="__cf_email__" >hello@pakap.com</span></a></h3>
                         </div>
                     </div>
                 </div>
@@ -114,16 +114,10 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="single-footer-widget">
                         <a href="<?php echo home_url(); ?>" class="logo">
-                            <?php
-                                echo wp_get_attachment_image( 
-                                get_field('header_logo', 'options'), 
-                                array('180', '120'),
-                                "",
-                                array( "class" => "img-fluid") ); 
-                            ?>
+                            <img src="https://via.placeholder.com/180x120" alt="logo" class="img-fluid">
                         </a>
 
-                        <p><?php echo esc_html( get_field('footer_logo_headline', 'options') ); ?></p>
+                        <p>We are a digital agency that helps brands to achieve their business outcomes. We see technology as a tool to create amazing things.</p>
 
                     </div>
                 </div>
@@ -131,8 +125,8 @@
                     <div class="single-footer-widget pl-2">
                         <h3>Contactez-nous</h3>
                         <ul class="links-list">
-                            <li><a href="mailto: <?php echo get_field('email', 'options'); ?>"><i class="ri-mail-fill"></i>&nbsp;<?php echo get_field('email', 'options'); ?></a></li>
-                            <li><a href="https://api.whatsapp.com/send?phone=<?php echo get_field('phone_number', 'options'); ?>&amp;text=Bonjour%20IPTV%20Smarters!"><i class="ri-whatsapp-line"></i>&nbsp;<?php echo get_field('phone_number', 'options'); ?></a></li>
+                            <li><a href="mailto: hello@pakap.com"><i class="ri-mail-fill"></i>&nbsp;hello@pakap.com</a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=1-541-754-3010&amp;text=Bonjour%20IPTV%20Smarters!"><i class="ri-whatsapp-line"></i>&nbsp;1-541-754-3010</a></li>
                         </ul>
                     </div>
                 </div>

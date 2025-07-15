@@ -50,13 +50,7 @@
 					</div>
                     <div class="logo">
                         <a href="<?php echo home_url(); ?>">
-							<?php
-								echo wp_get_attachment_image( 
-								get_field('header_logo', 'options'), 
-								array('278', '92'),
-								"",
-								array( "class" => "img-fluid", 'style' => "width: 60%;" ) ); 
-							?>
+							<img src="https://via.placeholder.com/278x92" alt="logo" class="img-fluid" style="width: 60%;">
 						</a>
                     </div>
                 </div>
@@ -68,13 +62,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="<?php echo home_url(); ?>">
-						<?php
-							echo wp_get_attachment_image( 
-							get_field('header_logo', 'options'), 
-							array('278', '92'),
-							"",
-							array( "class" => "img-fluid", 'style' => "width: 80%;" ) ); 
-						?>
+						<img src="https://via.placeholder.com/278x92" alt="logo" class="img-fluid" style="width: 80%;">
 					</a>
                     <div class="collapse navbar-collapse mean-menu">
 						<?php
