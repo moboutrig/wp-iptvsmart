@@ -28,13 +28,13 @@ function iptvsmart_setup() {
 		*/
 	load_theme_textdomain( 'iptvsmart', get_template_directory() . '/languages' );
 
-    acf_add_options_page(array(
-        'page_title'    => 'Theme Options',
-        'menu_title'    => 'Theme Options',
-        'menu_slug'     => 'theme-options',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
+    // acf_add_options_page(array(
+    //     'page_title'    => 'Theme Options',
+    //     'menu_title'    => 'Theme Options',
+    //     'menu_slug'     => 'theme-options',
+    //     'capability'    => 'edit_posts',
+    //     'redirect'      => false
+    // ));
 		
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -209,7 +209,7 @@ add_action('acf/init', function () {
     remove_filter('acf_the_content', 'wpautop' );
 } );
 
-require get_template_directory() . '/includes/license.php';
+// require get_template_directory() . '/includes/license.php';
 
 /**
  * Check if the theme is licensed.
